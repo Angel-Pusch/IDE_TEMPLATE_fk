@@ -15,6 +15,5 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: '3.10' 
-      - run: pip install mkdocs-material
-      - run: mkdocs serve
-
+      - run: pip install weasyprint mkdocs-with-pdf qrcode mkdocs-material
+      - run: mkdocs gh-deploy
