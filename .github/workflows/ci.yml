@@ -9,11 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        with:
-          persist-credentials: false
-          fetch-depth: 0
       - uses: actions/setup-python@v4
         with:
           python-version: '3.10' 
+      - run: git remote set-url origin https://Angel-Pusch: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@github.com/Angel-Pusch/IDE_TEMPLATE_fk.git
       - run: pip install weasyprint mkdocs-with-pdf qrcode mkdocs-material
       - run: mkdocs gh-deploy
